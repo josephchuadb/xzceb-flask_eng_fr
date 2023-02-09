@@ -32,7 +32,7 @@ def english_to_french(english_text):
 
     # Print results
     print(json.dumps(french_text, indent=2, ensure_ascii=False))
-
+    french_text=french_text["translations"][0]["translation"]
     return french_text
 
 def french_to_english(french_text):
@@ -45,4 +45,6 @@ def french_to_english(french_text):
 
     # Print results
     print(json.dumps(english_text, indent=2, ensure_ascii=False))
+    english_text=english_text["translations"][0]["translation"]
     return english_text
+    

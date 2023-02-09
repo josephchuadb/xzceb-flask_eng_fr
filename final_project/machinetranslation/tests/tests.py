@@ -1,9 +1,8 @@
 '''
 Unit Test for translator
-Author: Joseph Chua Debao
 '''
 import unittest
-from .translator import french_to_english, english_to_french
+from translator import english_to_french, french_to_english
 
 class TestFrenchToEnglish(unittest.TestCase):
     '''
@@ -13,7 +12,7 @@ class TestFrenchToEnglish(unittest.TestCase):
         '''
         Unit test for translating french to french
         '''
-        self.assertEqual(french_to_english(""), "")
+        self.assertEqual(french_to_english(), "")
         self.assertEqual(french_to_english('Bonjour'), 'Hello')
         self.assertNotEqual(french_to_english('Hello'), 'Bonjour')
 
@@ -25,7 +24,7 @@ class TestEnglishToFrench(unittest.TestCase):
         '''
         Unit test for translating english to french
         '''
-        self.assertEqual(english_to_french(""), "")
+        self.assertEqual(english_to_french(), "")
         self.assertEqual(english_to_french('Hello'), 'Bonjour')
         self.assertNotEqual(english_to_french('Bonjour'), 'Hello')
 
