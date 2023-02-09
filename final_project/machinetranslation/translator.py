@@ -1,6 +1,5 @@
 '''
 Translator
-Author: Joseph Chua Debao
 '''
 
 import json
@@ -30,8 +29,6 @@ def english_to_french(english_text):
     # write the code here
     french_text = language_translator.translate(
         text=english_text, model_id='en-fr').get_result()
-    
-    french_text = french_text.get("translations")[0].get("translation")
 
     # Print results
     print(json.dumps(french_text, indent=2, ensure_ascii=False))
@@ -45,8 +42,6 @@ def french_to_english(french_text):
     # write the code here
     english_text = language_translator.translate(
         text=french_text, model_id='fr-en').get_result()
-
-    english_text = english_text.get("translations")[0].get("translation")
 
     # Print results
     print(json.dumps(english_text, indent=2, ensure_ascii=False))
